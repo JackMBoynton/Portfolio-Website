@@ -1,0 +1,9 @@
+#left-nav,
+#right-nav {
+  list-style-type: none;
+}
+
+#left-nav a,
+#right-nav a {
+  text-decoration: none;
+}
