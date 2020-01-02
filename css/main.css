@@ -1,3 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  width: 100%;
+  background-color: #131313;
+}
+
+nav {
+  max-width: 1720px;
+  margin: 0 auto;
+  height: 50px;
+
+  position: relative;
+
+  font-family: acumin-pro, sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+nav a {
+  color: #777777;
+}
+
+#toggle-nav,
+.burger-menu {
+  display: none;
+}
+
+.burger-menu,
+.burger-menu img {
+  width: 40px;
+}
+
+#left-nav li,
+#right-nav li {
+  display: inline-block;
+  font-size: 14px;
+}
+
+#right-nav li {
+  margin: 14px 40px 0 5px;
+}
+
+#left-nav li {
+  margin: 14px 5px 0 40px;
+}
+
+#website-title {
+  display: flex;
+  justify-content: center;
+}
+
+#website-title a {
+  margin: 9px 10px 0px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+#website-title a span {
+  font-weight: bold;
+}
+
 #left-nav,
 #right-nav {
   list-style-type: none;
@@ -6,4 +72,90 @@
 #left-nav a,
 #right-nav a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    height: 60px;
+  }
+
+  #website-title {
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .burger-menu {
+    display: inline-block;
+  }
+
+  .burger-menu,
+  .burger-menu img {
+    margin: 2.5px 0 0 5px;
+  }
+
+  nav {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  #left-nav {
+    display: none;
+  }
+
+  #right-nav {
+    display: none;
+  }
+
+  #toggle-nav:checked ~ #left-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    top: 99%;
+    left: 0;
+    background-color: #131313;
+  }
+
+  #toggle-nav:checked ~ #right-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    top: 210%;
+    left: 0;
+    background-color: #131313;
+  }
+
+  #toggle-nav:checked ~ #left-nav li {
+    display: flex;
+    flex: 1;
+    margin: 14px 40px 0 5px;
+  }
+
+  #toggle-nav:checked ~ #right-nav li {
+    display: flex;
+    flex: 1;
+  }
+
+  #toggle-nav:checked ~ #right-nav .bottom-link {
+    padding-bottom: 15px;
+  }
+}
+
+@media all and (min-width: 769px) {
+  #website-title {
+    flex: 2 0px;
+  }
+  #left-nav {
+    order: 1;
+  }
+  #website-title {
+    order: 2;
+  }
+  #right-nav {
+    order: 3;
+  }
 }

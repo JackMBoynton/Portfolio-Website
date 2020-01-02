@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Jack Boynton | Home</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kjy6lqt.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav>
-      <ul id="left-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
+    <div class="nav-container">
+      <nav>
+        <input type="checkbox" id="toggle-nav" />
+        <label for="toggle-nav" class="burger-menu">
+          <img src="media/hamburger-menu.png" alt="" />
+        </label>
+        <ul id="left-nav">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+        </ul>
 
-      <a id="website-title" href="index.html"
-        ><span class="bold-link">JACK</span>BOYNTON</a
-      >
+        <div id="website-title">
+          <a href="index.html"><span class="bold-link">JACK</span>BOYNTON</a>
+        </div>
 
-      <ul id="right-nav">
-        <li><a href="cv-page.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <p>Test</p>
+        <ul id="right-nav">
+          <li><a href="cv-page.html">CV</a></li>
+          <li class="bottom-link"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
