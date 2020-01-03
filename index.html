@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Jack Boynton | Home</title>
+    <script
+      src="https://kit.fontawesome.com/a8cef15d44.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://use.typekit.net/kjy6lqt.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js"></script>
   </head>
   <body>
     <div class="nav-container">
       <nav>
         <input type="checkbox" id="toggle-nav" />
-        <label for="toggle-nav" class="burger-menu">
-          <img src="media/hamburger-menu.png" alt="" />
+        <label onclick="animatedMenuBtn()" for="toggle-nav" class="burger-menu">
+          <i id="menu-icon" class="fas fa-bars"></i>
         </label>
         <ul id="left-nav">
           <li><a href="index.html">HOME</a></li>

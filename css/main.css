@@ -29,9 +29,9 @@ nav a {
   display: none;
 }
 
-.burger-menu,
-.burger-menu img {
-  width: 40px;
+#menu-icon {
+  font-size: 45px;
+  color: #777777;
 }
 
 #left-nav li,
@@ -90,8 +90,8 @@ nav a {
   }
 
   .burger-menu,
-  .burger-menu img {
-    margin: 2.5px 0 0 5px;
+  .burger-menu i {
+    margin: 0 0 0 5px;
   }
 
   nav {
@@ -132,12 +132,13 @@ nav a {
   #toggle-nav:checked ~ #left-nav li {
     display: flex;
     flex: 1;
-    margin: 14px 40px 0 5px;
+    margin: 14px 40px 0 10px;
   }
 
   #toggle-nav:checked ~ #right-nav li {
     display: flex;
     flex: 1;
+    margin-left: 10px;
   }
 
   #toggle-nav:checked ~ #right-nav .bottom-link {
