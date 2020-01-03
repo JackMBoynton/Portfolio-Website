@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-.nav-container {
+.nav-container,
+.footer-container {
   width: 100%;
   background-color: #131313;
 }
@@ -20,7 +21,9 @@ nav {
   flex-flow: row wrap;
 }
 
-nav a {
+nav a,
+footer a,
+footer p {
   color: #777777;
 }
 
@@ -74,6 +77,70 @@ nav a {
   text-decoration: none;
 }
 
+body {
+  background-image: url("/assets/media/homepage-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #191919;
+}
+
+.main-content {
+  margin: auto;
+  width: 50%;
+  color: #ffffff;
+  text-align: center;
+  height: 670px;
+  position: relative;
+}
+
+.centered-content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-content h1,
+.main-content h2 {
+  font-family: acumin-pro, sans-serif;
+}
+
+.socials {
+  font-size: 45px;
+}
+
+/* Footer Styling */
+
+.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+footer {
+  max-width: 1720px;
+  margin: 0 auto;
+  height: 50px;
+
+  font-family: acumin-pro, sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer > #website-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.copyright > p {
+  margin: 13px 10px 0 10px;
+}
+
+/* Media Queries */
+
 @media only screen and (max-width: 768px) {
   nav {
     height: 60px;
@@ -94,7 +161,8 @@ nav a {
     margin: 0 0 0 5px;
   }
 
-  nav {
+  nav,
+  footer {
     justify-content: space-around;
     flex-direction: column;
   }
@@ -144,6 +212,15 @@ nav a {
   #toggle-nav:checked ~ #right-nav .bottom-link {
     padding-bottom: 15px;
   }
+
+  .copyright {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .copyright > p {
+    margin: -1px 10px 0 10px;
+  }
 }
 
 @media all and (min-width: 769px) {
@@ -158,5 +235,11 @@ nav a {
   }
   #right-nav {
     order: 3;
+  }
+  footer #website-title {
+    order: 1;
+  }
+  footer .copyright {
+    order: 2;
   }
 }
