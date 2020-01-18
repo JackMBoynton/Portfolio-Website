@@ -27,6 +27,44 @@ footer p {
   color: #777777;
 }
 
+hr {
+  height: 0.15rem;
+  margin: 0;
+  background: #131313;
+  border: none;
+  transition: 0.3s ease-in;
+}
+
+.left-underline {
+  width: 22%;
+  margin-left: 18.75%;
+}
+
+.right-underline {
+  width: 14%;
+  margin-left: 1.75%;
+}
+
+.home:hover ~ .left-underline {
+  background: #777777;
+}
+
+.projects:hover ~ .left-underline {
+  margin-left: 62.75%;
+  width: 36%;
+  background: #777777;
+}
+
+.cv:hover ~ .right-underline {
+  background: #777777;
+}
+
+.bottom-link:hover ~ .right-underline {
+  margin-left: 40.75%;
+  width: 38%;
+  background: #777777;
+}
+
 #toggle-nav,
 .burger-menu {
   display: none;
@@ -75,6 +113,7 @@ footer p {
 #left-nav a,
 #right-nav a {
   text-decoration: none;
+  width: 25%;
 }
 
 body {
@@ -125,8 +164,18 @@ body {
 }
 
 .socials {
-  font-size: 45px;
+  font-size: 43px;
   padding-bottom: 7.5px;
+}
+
+.socials a {
+  color: #ffffff;
+}
+
+.socials a:hover {
+  color: #777777;
+  font-size: 45px;
+  transition: 0.4s ease-in-out;
 }
 
 /* Footer Styling */
