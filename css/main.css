@@ -86,21 +86,31 @@ body {
   background-color: #191919;
 }
 
+.outerDiv {
+  width: 100%;
+  padding: 0;
+  display: table;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1;
+}
+
 .main-content {
-  margin: auto;
-  width: 50%;
+  padding: 0;
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0;
   color: #ffffff;
-  text-align: center;
-  height: 670px;
-  position: relative;
 }
 
 .centered-content {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
 }
 
 .main-content h1,
@@ -108,8 +118,15 @@ body {
   font-family: acumin-pro, sans-serif;
 }
 
+.main-content h1 {
+  margin-bottom: -7.5px;
+  margin-top: -2px;
+  font-size: 3em;
+}
+
 .socials {
   font-size: 45px;
+  padding-bottom: 7.5px;
 }
 
 /* Footer Styling */
@@ -241,5 +258,21 @@ footer > #website-title {
   }
   footer .copyright {
     order: 2;
+  }
+}
+
+@media all and (min-width: 340px) {
+  .centered-content {
+    width: 320px;
+  }
+}
+
+@media all and (max-width: 339px) {
+  .centered-content h1 {
+    font-size: 36px;
+  }
+
+  .centered-content h2 {
+    font-size: 18px;
   }
 }
