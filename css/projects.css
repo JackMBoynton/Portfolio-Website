@@ -120,9 +120,60 @@ body {
   background-color: #191919;
 }
 
-#githubProjects {
+.outerDiv {
+  width: 100%;
+  padding: 0;
+  display: table;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1;
+}
+
+.page-text {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
   color: #ffffff;
   font-family: acumin-pro, sans-serif;
+}
+
+#githubProjects {
+  margin-top: 20px;
+  color: #ffffff;
+  font-family: acumin-pro, sans-serif;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #282828;
+}
+
+table,
+th,
+td {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #202020;
+}
+
+td a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.right-side {
+  border-left: 3px solid #191919;
 }
 
 /* Footer Styling */
@@ -233,6 +284,10 @@ footer > #website-title {
 
   .copyright > p {
     margin: -1px 10px 0 10px;
+  }
+
+  .page-text {
+    margin-top: 70px;
   }
 }
 

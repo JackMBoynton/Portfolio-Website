@@ -15,21 +15,27 @@ jQuery.fn.loadRepositories = function(username) {
     var repos = data.data; // JSON Parsing
     sortByName(repos);
 
-    var list = $("<dl/>");
-    target.empty().append(list);
+    var table = $("<table>");
+    target.empty().append(table);
+    table.append(
+      '<tr><th>Project Name</th><th class="right-side">Project Description</th></tr>'
+    );
     $(repos).each(function() {
       if (this.name != username.toLowerCase() + ".github.com") {
-        list.append(
-          '<dt><a href="' +
-            (this.homepage ? this.homepage : this.html_url) +
-            '">' +
-            this.name + // This is just the title.
-            "</a> <em>" +
-            (this.language ? "(" + this.language + ")" : "") +
-            "</em></dt>"
+        table.append(
+          '<tr><td><a target="_blank" href="' +
+          (this.homepage ? this.homepage : this.html_url) + // href link
+          '">' +
+          this.name + // repo title.
+          "</a><em>" +
+          (this.language ? " (" + this.language + ")" : "") + // reoo language
+            "</em></td>" +
+            '<td class="right-side">' +
+            this.description +
+            "</td></tr>"
         );
-        list.append("<dd>" + this.description + "</dd>"); // This is the description.
       }
+      table.append("</table>");
     });
   });
 
