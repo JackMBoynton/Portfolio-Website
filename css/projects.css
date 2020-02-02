@@ -27,42 +27,14 @@ footer p {
   color: #777777;
 }
 
-hr {
-  height: 0.15rem;
-  margin: 0;
-  background: #131313;
-  border: none;
-  transition: 0.3s ease-in;
+nav a:hover {
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
 }
 
-.left-underline {
-  width: 22%;
-  margin-left: 18.75%;
-}
-
-.right-underline {
-  width: 14%;
-  margin-left: 1.75%;
-}
-
-.home:hover ~ .left-underline {
-  background: #777777;
-}
-
-.projects:hover ~ .left-underline {
-  margin-left: 62.75%;
-  width: 36%;
-  background: #777777;
-}
-
-.cv:hover ~ .right-underline {
-  background: #777777;
-}
-
-.bottom-link:hover ~ .right-underline {
-  margin-left: 40.75%;
-  width: 38%;
-  background: #777777;
+footer a:hover {
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
 }
 
 #toggle-nav,
@@ -144,6 +116,7 @@ body {
   margin-top: 20px;
   color: #ffffff;
   font-family: acumin-pro, sans-serif;
+  text-align: center;
 }
 
 table {
@@ -168,12 +141,13 @@ td a {
   color: #ffffff;
 }
 
-td a:hover {
-  text-decoration: underline;
+.splitter-side {
+  border-left: 3px solid #191919;
 }
 
-.right-side {
-  border-left: 3px solid #191919;
+td a i {
+  font-size: 14px;
+  padding: 3px 0 3px 0;
 }
 
 /* Footer Styling */
