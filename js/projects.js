@@ -15,7 +15,7 @@ jQuery.fn.loadRepositories = function(username) {
     var repos = data.data; // JSON Parsing
     sortByName(repos);
 
-    var table = $("<table>"); // Creating a empty table as a variable.
+    var table = $('<table id="projects-table">'); // Creating a empty table as a variable.
     target.empty().append(table);
     table.append(
       '<tr><th>Project Name</th><th class="splitter-side">Project Description</th><th class="splitter-side">Source Code</th></tr>'// Appending the table headings to the table.
@@ -47,3 +47,25 @@ jQuery.fn.loadRepositories = function(username) {
     });
   }
 };
+
+function searchFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchField");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("projects-table");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}

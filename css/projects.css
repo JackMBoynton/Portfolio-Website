@@ -112,6 +112,19 @@ body {
   font-family: acumin-pro, sans-serif;
 }
 
+#searchField {
+  margin-top: 15px;
+  width: 100%; /* Full-width */
+  font-size: 14px; /* Increase font-size */
+  padding: 6px 10px 6px 20px; /* Add some padding */
+  background-color: #282828;
+  border: 1px solid #777777; /* Add a grey border */
+}
+
+#searchField:focus {
+  color: #ffffff;
+}
+
 #githubProjects {
   margin-top: 20px;
   color: #ffffff;
@@ -280,8 +293,10 @@ footer > #website-title {
   }
   footer #website-title {
     order: 1;
+    padding-left: 10px;
   }
   footer .copyright {
     order: 2;
+    padding-right: 10px;
   }
 }

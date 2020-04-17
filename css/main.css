@@ -275,9 +275,11 @@ footer > #website-title {
   }
   footer #website-title {
     order: 1;
+    padding-left: 10px;
   }
   footer .copyright {
     order: 2;
+    padding-right: 10px;
   }
 }
 
